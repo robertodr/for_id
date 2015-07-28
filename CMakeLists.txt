@@ -9,16 +9,18 @@ endif()
 #  Declare project name and programming languages
 project(for_id CXX)
 
+set(CMAKE_BUILD_TYPE Release)
+
 # Modules
 set(CMAKE_MODULE_PATH
     ${CMAKE_MODULE_PATH}
     ${CMAKE_SOURCE_DIR}/cmake
     )
 
-# Boost detection
-include(ConfigBoost)
-include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
-
+find_package(Boost 1.54.0)
+if (NOT Boost_FOUND)
+    include_directories(boost)
+endif()
 include_directories(src)
 
 add_executable(example.x example.cpp)
