@@ -289,7 +289,7 @@ struct for_id_impl<D, S1, S2, S3, E1, E2, E3, E1, E2, E3, T1, T2, T3>
     template <typename ReturnType, typename T, typename InputType>
     static ReturnType * execute(T & /* f */, const InputType & /* data */,
                                      int /* id1 */, int /* id2 */ = 0, int /* id3 */ = 0) {
-        return nullptr;
+        return NULL;
     }
 };
 
