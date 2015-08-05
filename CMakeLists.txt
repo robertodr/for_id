@@ -17,10 +17,7 @@ set(CMAKE_MODULE_PATH
     ${CMAKE_SOURCE_DIR}/cmake
     )
 
-find_package(Boost 1.54.0)
-if (NOT Boost_FOUND)
-    include_directories(boost)
-endif()
+include_directories(include)
 include_directories(src)
 
 add_executable(example.x example.cpp)
