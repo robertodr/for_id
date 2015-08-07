@@ -31,4 +31,4 @@
 *build*
 
 # Autocmake stuff
-cmake/lib/config.pyc
+cmake/lib/*.pyc

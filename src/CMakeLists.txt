@@ -3,6 +3,7 @@ list(SORT headers_list)
 
 find_package(Boost 1.54.0)
 if (NOT Boost_FOUND)
+    message(STATUS "   Using local copy of Boost headers")
     include_directories(SYSTEM ${CMAKE_SOURCE_DIR}/external)
 else()
     include_directories(SYSTEM ${Boost_INCLUDE_DIRS})
