@@ -29,3 +29,6 @@
 
 # Build directories
 *build*
+
+# Autocmake stuff
+cmake/lib/config.pyc
